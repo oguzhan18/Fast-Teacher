@@ -1,0 +1,63 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/%C3%87art_app_beyaz_%282%29.png/600px-%C3%87art_app_beyaz_%282%29.png" type="image/x-icon" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/%C3%87art_app_beyaz_%282%29.png/600px-%C3%87art_app_beyaz_%282%29.png" alt="icon/logo" class="box">
+          <div class="text"> 
+              Fast Teacher
+          </div>
+        </div>
+<center>
+        <div class="main-div" id="login_div">
+
+            <h3>FAST TEACHER</h3>
+            <input type="email" placeholder="Email" id="email_field" />
+            <input type="password" placeholder="Password" id="password_field" />
+
+            <button onclick="login()">Login</button>
+            <button onclick="showRegister()">Register</button>
+
+        </div>
+
+        <div class="loggedin-div" id="user_div">
+            <p id="user_para"></p>
+            <button onclick="logout()" id="logout">Logout</button>
+        </div>
+
+        <div class="register-div" id="register_div">
+            <h3>Register</h3>
+            <input type="email" placeholder="Email" id="reg_email_field" />
+            <input type="password" placeholder="Password" id="reg_password_field" />
+            <button onclick="register()">Register</button>
+        </div></center>
+
+        
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-firestore.js"></script>
+        <script>
+            var firebaseConfig = {
+                apiKey: "AIzaSyA0qw_10YFNSe0lt-b_C9nuFlrycIw0i3A",
+                authDomain: "fir-web-5f3a5.firebaseapp.com",
+                databaseURL: "https://fir-web-5f3a5.firebaseio.com",
+                projectId: "fir-web-5f3a5",
+                storageBucket: "fir-web-5f3a5.appspot.com",
+                messagingSenderId: "409082232162",
+                appId: "1:409082232162:web:0b3ad1a490c5503414803b"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="script/login.js"></script>
+    </body>
+    </html>
